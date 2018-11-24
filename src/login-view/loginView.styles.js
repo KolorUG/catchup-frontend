@@ -7,6 +7,8 @@ const LoginViewWrapper = styled.div`
   align-items: center;
   height: 100vh;
   width: 100vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
   color: ${({ theme }) => theme.fontColor};
 `;
 
