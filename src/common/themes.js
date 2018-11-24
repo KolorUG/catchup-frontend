@@ -4,6 +4,7 @@ const themes = {
     subColor: '#AAAAAA'
   },
   main: {
+    white: "#ffffff",
     fontColor: '#b8dff0',
     borderColor: '#b8dff0',
     submittingColor: 'rgba(184, 223, 240, 0.38)',
