@@ -95,4 +95,22 @@ const Symbol = styled.div`
   }
 `;
 
-export { ProfileViewWrapper, ProfileTopView, ProfileIconWrapper, CrucialInfo, Title, Subtitle, SubInfo, Symbol, Reward, ProfilePicture};
+const ProfileLowerView = styled.div`
+  margin-top: 16px;
+
+`;
+
+const SectionTitle = styled.p`
+  color: ${({ theme }) => theme.fontColor};
+  font-weight: 400;
+  margin-bototm: 4px;
+  opacity: 0.33;
+  margin-bottom: 8px;
+`;
+
+const Section = styled.p`
+  color: ${({ theme }) => theme.white};
+  font-weight: 100;
+`;
+
+export { ProfileViewWrapper, ProfileTopView, ProfileIconWrapper, CrucialInfo, Title, Subtitle, SubInfo, Symbol, Reward, ProfilePicture, ProfileLowerView, Section, SectionTitle};

@@ -9,7 +9,10 @@ import {
   SubInfo,
   Symbol,
   Reward,
-  ProfilePicture
+  ProfilePicture,
+  ProfileLowerView,
+  Section,
+  SectionTitle
 } from './profileView.styles.js'
 import ProfileIcon from '../assets/profileIcon.png'
 import DistanceIcon from '../assets/distance.png'
@@ -44,6 +47,13 @@ export default class ProfileView extends Component {
           </SubInfo>
         </CrucialInfo>
         </ProfileTopView>
+        <ProfileLowerView>
+          <SectionTitle>BIO</SectionTitle>
+          <Section>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur cursus libero, ut malesuada augue tristique ac.
+            Aenean dignissim suscipit sapien, hendrerit semper eros mollis tincidunt. Quisque non mattis tortor."
+          </Section>
+        </ProfileLowerView>
       </ProfileViewWrapper>
     )
   }
