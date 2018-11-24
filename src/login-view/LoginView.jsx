@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { ThemeProvider } from 'styled-components'
-import { themes } from '../common/themes'
 import {
   LoginViewWrapper,
   BrandLogoWrapper,
@@ -40,7 +37,6 @@ export default class LoginView extends Component {
 
   render() {
     return (
-      <ThemeProvider theme={themes.main}>
         <LoginViewWrapper>
           <BrandLogoWrapper>
             <img src={brandLogo}/>
@@ -65,7 +61,6 @@ export default class LoginView extends Component {
           </InputGrouper>
           <Button onClick={() => this.handleSubmit()}>LOGIN</Button>
         </LoginViewWrapper>
-      </ThemeProvider>
     )
   }
 }
