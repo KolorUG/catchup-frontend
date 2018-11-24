@@ -9,6 +9,7 @@ import {
   Input,
   Button
 } from './loginView.styles.js'
+import auth from '../common/auth.js'
 
 import brandLogo from '../assets/brand-logo.png'
 
@@ -33,6 +34,14 @@ export default class LoginView extends Component {
       wasSubmittedOnce: true
     });
 
+    if (this.state.password.length < 6 || this.state.password.length > 18) {
+      return;
+    }
+    if (this.state.password.length < 6 || this.state.password.length > 18) {
+      return;
+    }
+
+    auth.authenticate(this.props.history.push('/profile'));
   };
 
   render() {
