@@ -4,10 +4,17 @@ import {
   BrandLogoWrapper,
   MainButtonsGroup
 } from './mainView.styles.js'
+import auth from '../common/auth.js'
 import Button from '../common/Button.style.js'
 import BrandLogo from '../assets/brand-logo.png'
 
 export default class MainView extends Component {
+
+  handleSignout() {
+    auth.signout();
+    this.props.history.push('/login')
+  }
+
   render() {
     return (
       <MainViewWrapper>
@@ -18,7 +25,7 @@ export default class MainView extends Component {
           <Button>PROFILE</Button>
           <Button>FIND A TEACHER</Button>
         </MainButtonsGroup>
-        <Button>LOGOUT</Button>
+        <Button onClick={() => this.handleSignout()}>LOGOUT</Button>
       </MainViewWrapper>
     )
   }
