@@ -6,9 +6,9 @@ import {
   InputWrapper,
   InputLabel,
   InputError,
-  Input,
-  Button
+  Input
 } from './loginView.styles.js'
+import Button from '../common/Button.style.js'
 import auth from '../common/auth.js'
 
 import brandLogo from '../assets/brand-logo.png'
@@ -49,7 +49,7 @@ export default class LoginView extends Component {
       return;
     }
 
-    auth.authenticate(this.props.history.push('/profile'));
+    auth.authenticate(this.props.history.push('/index'));
   };
 
   render() {
@@ -76,7 +76,7 @@ export default class LoginView extends Component {
               }
             </InputWrapper>
           </InputGrouper>
-          <Button isSubmitting={this.state.isSubmitting} onClick={() => this.handleSubmit()}>{!this.state.isSubmitting ? 'LOGIN' : 'logging in...'}</Button>
+          <Button type={{ font: 'fontRegular' }} isSubmitting={this.state.isSubmitting} onClick={() => this.handleSubmit()}>{!this.state.isSubmitting ? 'LOGIN' : 'logging in...'}</Button>
         </LoginViewWrapper>
     )
   }

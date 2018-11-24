@@ -64,24 +64,4 @@ const Input = styled.input`
     color: ${({ theme }) => theme.fontColor};
 `;
 
-const Button = styled.button`
-  padding: 2.5% 7%;
-  background: none;
-  border-radius: 17px;
-  border: 2px solid ${({ theme, isSubmitting }) => !isSubmitting ? theme.borderColor : theme.submittingColor}; 
-  font-size: 1.5rem;
-  color: inherit;
-  background-color: ${({ theme, isSubmitting }) => isSubmitting === true ? theme.submittingColor : ''};
-  outline: 0;
-  transition: 0.125s ease-in-out;
-  
-  @media screen and (min-width: 800px) {
-    padding: 2% 4%;
-  }
-  
-  @media screen and (min-width: 1200px) {
-    padding: 1% 2%;
-  }
-`;
-
-export { LoginViewWrapper, BrandLogoWrapper, InputError, InputLabel, InputGrouper, InputWrapper, Input, Button };
+export { LoginViewWrapper, BrandLogoWrapper, InputError, InputLabel, InputGrouper, InputWrapper, Input };
