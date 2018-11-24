@@ -11,12 +11,9 @@ const ProfileTopView = styled.div`
 `;
 
 const ProfileIconWrapper = styled.div`
+  position: relative;
   width: 128px;
   height: 128px;
-  
-  & > img {
-    height: 100%;
-  }
   
   @media screen and (min-width: 800px) {
      width: 194px;
@@ -27,6 +24,18 @@ const ProfileIconWrapper = styled.div`
     width: 256px;
     height: 256px;
   }
+`;
+
+const ProfilePicture = styled.img`
+  height: 100%;
+`;
+
+const Reward = styled.img`
+  position: absolute;
+  bottom: -16px;
+  right: 8px;
+  height: 32px;
+  width: 21px;
 `;
 
 const CrucialInfo = styled.div`
@@ -74,4 +83,4 @@ const Symbol = styled.div`
   }
 `;
 
-export { ProfileViewWrapper, ProfileTopView, ProfileIconWrapper, CrucialInfo, Title, Subtitle, SubInfo, Symbol};
+export { ProfileViewWrapper, ProfileTopView, ProfileIconWrapper, CrucialInfo, Title, Subtitle, SubInfo, Symbol, Reward, ProfilePicture};

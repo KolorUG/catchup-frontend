@@ -7,11 +7,14 @@ import {
   Title,
   Subtitle,
   SubInfo,
-  Symbol
+  Symbol,
+  Reward,
+  ProfilePicture
 } from './profileView.styles.js'
 import ProfileIcon from '../assets/profileIcon.png'
 import DistanceIcon from '../assets/distance.png'
 import SalaryIcon from '../assets/money.png'
+import RewardIcon from '../assets/reward.png'
 export default class ProfileView extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +26,8 @@ export default class ProfileView extends Component {
       <ProfileViewWrapper>
         <ProfileTopView>
         <ProfileIconWrapper>
-          <img src={ProfileIcon}/>
+          <ProfilePicture src={ProfileIcon}/>
+          <Reward src={RewardIcon}/>
         </ProfileIconWrapper>
         <CrucialInfo>
           <Title>Sad cate</Title>
