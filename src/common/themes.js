@@ -7,7 +7,7 @@ const themes = {
     white: "#ffffff",
     fontColor: '#b8dff0',
     borderColor: '#b8dff0',
-    submittingColor: 'rgba(184, 223, 240, 0.38)',
+    submittingColor: 'rgba(184, 223, 240, 0.33)',
     errorColor: '#ffb487'
   }
 };
