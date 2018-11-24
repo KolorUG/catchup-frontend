@@ -10,7 +10,8 @@ const themes = {
     fontRegular: '400',
     borderColor: '#b8dff0',
     submittingColor: 'rgba(184, 223, 240, 0.33)',
-    errorColor: '#ffb487'
+    errorColor: '#ffb487',
+    marginTop: '4px'
   }
 };
 
