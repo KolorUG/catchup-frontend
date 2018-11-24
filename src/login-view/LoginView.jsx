@@ -20,7 +20,8 @@ export default class LoginView extends Component {
     this.state = {
       login: '',
       password: '',
-      wasSubmittedOnce: false
+      wasSubmittedOnce: false,
+      isSubmitting: false
     }
   }
 
@@ -31,13 +32,20 @@ export default class LoginView extends Component {
 
   handleSubmit = () => {
     this.setState({
-      wasSubmittedOnce: true
+      wasSubmittedOnce: true,
+      isSubmitting: true,
     });
 
     if (this.state.password.length < 6 || this.state.password.length > 18) {
+      this.setState({
+        isSubmitting: false
+      });
       return;
     }
     if (this.state.password.length < 6 || this.state.password.length > 18) {
+      this.setState({
+        isSubmitting: false
+      });
       return;
     }
 
@@ -68,7 +76,7 @@ export default class LoginView extends Component {
               }
             </InputWrapper>
           </InputGrouper>
-          <Button onClick={() => this.handleSubmit()}>LOGIN</Button>
+          <Button isSubmitting={this.state.isSubmitting} onClick={() => this.handleSubmit()}>{!this.state.isSubmitting ? 'LOGIN' : 'logging in...'}</Button>
         </LoginViewWrapper>
     )
   }

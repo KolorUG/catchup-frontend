@@ -66,9 +66,12 @@ const Button = styled.button`
   padding: 2.5% 7%;
   background: none;
   border-radius: 17px;
-  border: 2px solid ${({ theme }) => theme.borderColor}; 
+  border: 2px solid ${({ theme, isSubmitting }) => !isSubmitting ? theme.borderColor : theme.submittingColor}; 
   font-size: 1.5rem;
   color: inherit;
+  background-color: ${({ theme, isSubmitting }) => isSubmitting === true ? theme.submittingColor : ''};
+  outline: 0;
+  transition: 0.125s ease-in-out;
   
   @media screen and (min-width: 800px) {
     padding: 2% 4%;
