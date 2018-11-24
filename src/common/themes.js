@@ -3,9 +3,9 @@ const themes = {
     mainColor: '#666666',
     subColor: '#AAAAAA'
   },
-  blackAndYellow: {
-    mainColor: '#000000',
-    subColor: 'yellow'
+  main: {
+    fontColor: '#b8dff0',
+    borderColor: '#b8dff0'
   }
 };
 

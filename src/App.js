@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { ProtectedRoute } from "./common/ProtectedRoute";
-import { ThemeProvider } from 'styled-components'
-import { themes } from './common/themes'
 import GlobalStyle from './common/GlobalStyle'
 import {
   BrowserRouter as Router,
@@ -24,8 +22,6 @@ class App extends Component {
           <MediaQuery query="(min-device-width: 481px)">
             <GlobalStyle/>
           </MediaQuery>
-          <ThemeProvider theme={themes.grayscale}>
-          </ThemeProvider>
           <ProtectedRoute path="/index" component={MainView}/>
           <Route path="/login" component={LoginView} />
         </React.Fragment>
