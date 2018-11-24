@@ -49,8 +49,10 @@ export default class LoginView extends Component {
       return;
     }
 
-    auth.authenticate(this.props.history.push('/index'));
+    auth.authenticate(this.goToIndex);
   };
+
+  goToIndex = () => this.props.history.push('/index');
 
   render() {
     return (
