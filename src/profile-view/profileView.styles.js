@@ -36,6 +36,18 @@ const Reward = styled.img`
   right: 8px;
   height: 32px;
   width: 21px;
+  
+  @media screen and (min-width: 800px) {
+     height: 48px;
+     width: 32px;
+     bottom: -24px;
+   }
+
+  @media screen and (min-width: 1200px) {
+    height: 64px 
+    width: 42px;
+    bottom: -32px;
+  }
 `;
 
 const CrucialInfo = styled.div`
