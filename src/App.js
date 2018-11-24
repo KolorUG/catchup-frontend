@@ -5,7 +5,8 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import backgroundImage from './assets/background.png'
+import backgroundImageMobile from './assets/background-mobile.png'
+import backgroundImageDesktop from './assets/background-desktop.png'
 import { ThemeProvider } from 'styled-components'
 import { themes } from "./common/themes";
 
@@ -35,7 +36,7 @@ class App extends Component {
       <Router>
         <ThemeProvider theme={themes.main}>
           <React.Fragment>
-            <GlobalStyle backgroundImage={backgroundImage}/>
+            <GlobalStyle backgroundImage={this.state.windowWidth > 375 ? backgroundImageDesktop : backgroundImageMobile}/>
             <ProtectedRoute path="/index" component={MainView}/>
             <Route path="/login" component={LoginView}/>
             <ProtectedRoute path="/profile" component={ProfileView}/>
