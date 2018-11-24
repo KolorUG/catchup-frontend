@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   html {
-    background: url(${({ backgroundImage }) => backgroundImage}) no-repeat center center fixed; 
+    background: url(${({ backgroundImage }) => backgroundImage}) no-repeat center center fixed;
+    background-size: cover; 
   }
 
   * {
