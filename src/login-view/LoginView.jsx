@@ -78,7 +78,7 @@ export default class LoginView extends Component {
               }
             </InputWrapper>
           </InputGrouper>
-          <Button type={{ font: 'fontRegular' }} isSubmitting={this.state.isSubmitting} onClick={() => this.handleSubmit()}>{!this.state.isSubmitting ? 'LOGIN' : 'logging in...'}</Button>
+          <Button type={{ font: 'fontRegular' }} isActive={this.state.isSubmitting} onClick={() => this.handleSubmit()}>{!this.state.isSubmitting ? 'LOGIN' : 'logging in...'}</Button>
         </LoginViewWrapper>
     )
   }
