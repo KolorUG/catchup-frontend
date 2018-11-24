@@ -22,7 +22,7 @@ export default class MainView extends Component {
           <img src={BrandLogo}/>
         </BrandLogoWrapper>
         <MainButtonsGroup>
-          <Button>PROFILE</Button>
+          <Button onClick={() => this.props.history.push('/profile')}>PROFILE</Button>
           <Button>FIND A TEACHER</Button>
         </MainButtonsGroup>
         <Button onClick={() => this.handleSignout()}>LOGOUT</Button>
