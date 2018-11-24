@@ -26,7 +26,7 @@ export default class ProfileView extends Component {
     super(props);
 
     this.state = {
-      subjcets: null,
+      subjects: null,
       selectedSubject: null
     }
   }
