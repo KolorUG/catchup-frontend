@@ -36,10 +36,11 @@ const InputWrapper = styled.div`
 
 const Input = styled.input`
   width: 100%;
-  padding: 5% 14px; 
+  padding: 3% 14px; 
+  font-size: 1.5rem;
   background: none;
   border-radius: 28px;
-  border: 1px solid ${({ theme }) => theme.borderColor}; 
+  border: 2px solid ${({ theme }) => theme.borderColor}; 
   text-align: center;
   outline: 0;
   ::placeholder
