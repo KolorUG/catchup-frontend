@@ -26,12 +26,19 @@ const InputGrouper = styled.div`
   width: 53%;
 `;
 
+const InputLabel = styled.p`
+  padding: 0 14px;
+`;
+
 const InputWrapper = styled.div`
   margin: 0 auto;
   padding-top: 12%;
-  & > p {
-    padding: 0 14px;
-  }
+`;
+
+const InputError = styled.p`
+  padding: 4px 14px 0;
+  font-size: 0.875rem;
+  color: ${({ theme }) => theme.errorColor}
 `;
 
 const Input = styled.input`
@@ -56,4 +63,4 @@ const Button = styled.button`
   color: inherit;
 `;
 
-export { LoginViewWrapper, BrandLogoWrapper, InputGrouper, InputWrapper, Input, Button };
+export { LoginViewWrapper, BrandLogoWrapper, InputError, InputLabel, InputGrouper, InputWrapper, Input, Button };

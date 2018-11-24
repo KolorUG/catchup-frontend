@@ -5,7 +5,8 @@ const themes = {
   },
   main: {
     fontColor: '#b8dff0',
-    borderColor: '#b8dff0'
+    borderColor: '#b8dff0',
+    errorColor: '#ffb487'
   }
 };
 
