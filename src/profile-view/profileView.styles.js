@@ -17,6 +17,16 @@ const ProfileIconWrapper = styled.div`
   & > img {
     height: 100%;
   }
+  
+  @media screen and (min-width: 800px) {
+     width: 194px;
+     height: 194px;
+   }
+
+  @media screen and (min-width: 1200px) {
+    width: 256px;
+    height: 256px;
+  }
 `;
 
 const CrucialInfo = styled.div`
@@ -26,6 +36,14 @@ const CrucialInfo = styled.div`
 const Title = styled.p`
   color: ${({ theme }) => theme.white};
   font-size: 1.25rem;
+  
+  @media screen and (min-width: 800px) {
+    font-size: 1.875rem;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const Subtitle = styled.p`
