@@ -11,6 +11,7 @@ import { themes } from "./common/themes";
 
 import LoginView from './login-view/LoginView'
 import MainView from './main-view/MainView'
+import ProfileView from './profile-view/ProfileView'
 
 class App extends Component {
   constructor(props) {
@@ -37,6 +38,7 @@ class App extends Component {
             <GlobalStyle backgroundImage={backgroundImage}/>
             <ProtectedRoute path="/index" component={MainView}/>
             <Route path="/login" component={LoginView}/>
+            <ProtectedRoute path="/profile" component={ProfileView}/>
           </React.Fragment>
         </ThemeProvider>
       </Router>
