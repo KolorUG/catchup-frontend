@@ -17,6 +17,14 @@ const BrandLogoWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
+ 
+  @media screen and (min-width: 800px) {
+    width: 60%;
+  }
+ 
+  @media screen and (min-width: 1200px) {
+    width: 40%;
+  }
 `;
 
 const InputGrouper = styled.div`
@@ -32,7 +40,7 @@ const InputLabel = styled.p`
 
 const InputWrapper = styled.div`
   margin: 0 auto;
-  padding-top: 12%;
+  padding-top: 28px;
 `;
 
 const InputError = styled.p`
@@ -61,6 +69,14 @@ const Button = styled.button`
   border: 2px solid ${({ theme }) => theme.borderColor}; 
   font-size: 1.5rem;
   color: inherit;
+  
+  @media screen and (min-width: 800px) {
+    padding: 2% 4%;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    padding: 1% 2%;
+  }
 `;
 
 export { LoginViewWrapper, BrandLogoWrapper, InputError, InputLabel, InputGrouper, InputWrapper, Input, Button };
