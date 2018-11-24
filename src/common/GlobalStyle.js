@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    background: url(${({ backgroundImage }) => backgroundImage}) no-repeat center center fixed; 
+  }
+
   * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;

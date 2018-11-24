@@ -7,6 +7,8 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
+import MediaQuery from 'react-responsive'
+import backgroundImageMobile from './assets/mobile-bg.png'
 
 import LoginView from './login-view/LoginView'
 import MainView from './main-view/MainView'
@@ -16,7 +18,12 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-          <GlobalStyle/>
+          <MediaQuery query="(max-device-width: 480px)">
+            <GlobalStyle backgroundImage={backgroundImageMobile}/>
+          </MediaQuery>
+          <MediaQuery query="(min-device-width: 481px)">
+            <GlobalStyle/>
+          </MediaQuery>
           <ThemeProvider theme={themes.grayscale}>
           </ThemeProvider>
           <ProtectedRoute path="/index" component={MainView}/>
