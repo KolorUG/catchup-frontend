@@ -97,7 +97,10 @@ const Symbol = styled.div`
 
 const ProfileLowerView = styled.div`
   margin-top: 16px;
+`;
 
+const Section = styled.div`
+margin-bottom: 16px;
 `;
 
 const SectionTitle = styled.p`
@@ -108,9 +111,34 @@ const SectionTitle = styled.p`
   margin-bottom: 8px;
 `;
 
-const Section = styled.p`
+const SectionContent = styled.p`
   color: ${({ theme }) => theme.white};
   font-weight: 100;
 `;
 
-export { ProfileViewWrapper, ProfileTopView, ProfileIconWrapper, CrucialInfo, Title, Subtitle, SubInfo, Symbol, Reward, ProfilePicture, ProfileLowerView, Section, SectionTitle};
+const BottomBar = styled.div`
+  position: fixed;
+  bottom: 16px;
+  left: 0;  
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: ${({ theme }) => theme.fontColor};
+`;
+
+export {
+  ProfileViewWrapper,
+  ProfileTopView,
+  ProfileIconWrapper,
+  CrucialInfo,
+  Title,
+  Subtitle,
+  SubInfo,
+  Symbol,
+  Reward,
+  ProfilePicture,
+  ProfileLowerView,
+  Section,
+  SectionContent,
+  SectionTitle,
+  BottomBar };

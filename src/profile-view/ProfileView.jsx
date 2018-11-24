@@ -12,8 +12,11 @@ import {
   ProfilePicture,
   ProfileLowerView,
   Section,
-  SectionTitle
+  SectionTitle,
+  SectionContent,
+  BottomBar
 } from './profileView.styles.js'
+import Button from '../common/Button.style.js'
 import ProfileIcon from '../assets/profileIcon.png'
 import DistanceIcon from '../assets/distance.png'
 import SalaryIcon from '../assets/money.png'
@@ -48,12 +51,25 @@ export default class ProfileView extends Component {
         </CrucialInfo>
         </ProfileTopView>
         <ProfileLowerView>
-          <SectionTitle>BIO</SectionTitle>
           <Section>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur cursus libero, ut malesuada augue tristique ac.
-            Aenean dignissim suscipit sapien, hendrerit semper eros mollis tincidunt. Quisque non mattis tortor."
+            <SectionTitle>BIO</SectionTitle>
+            <SectionContent>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur cursus libero, ut malesuada augue tristique ac.
+              Aenean dignissim suscipit sapien, hendrerit semper eros mollis tincidunt. Quisque non mattis tortor."
+            </SectionContent>
+          </Section>
+          <Section>
+            <SectionTitle>WHAT CAN I HELP YOU WITH</SectionTitle>
+            <SectionContent>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur cursus libero, ut malesuada augue tristique ac.
+              Aenean dignissim suscipit sapien, hendrerit semper eros mollis tincidunt. Quisque non mattis tortor."
+            </SectionContent>
           </Section>
         </ProfileLowerView>
+        <BottomBar>
+          <Button onClick={() => this.props.history.push('/index')}>BACK</Button>
+          <Button>CATCH UP!</Button>
+        </BottomBar>
       </ProfileViewWrapper>
     )
   }
