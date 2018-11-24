@@ -13,6 +13,10 @@ const storageService = {
       return;
     }
     sessionStorage.setItem(item, value);
+  },
+  remove(item) {
+    localStorage.removeItem(item);
+    sessionStorage.removeItem(item);
   }
 };
 

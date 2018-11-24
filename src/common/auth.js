@@ -1,3 +1,5 @@
+import storageService from './storageService.js'
+
 const auth = {
   isAuthenticated: false,
   authenticate(callback) {
@@ -5,6 +7,7 @@ const auth = {
     setTimeout(callback, 100);
   },
   signout(callback) {
+    storageService.remove('catchup-auth-token');
     this.isAuthenticated = false;
     setTimeout(callback, 100)
   }
