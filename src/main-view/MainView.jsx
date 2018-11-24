@@ -11,9 +11,10 @@ import BrandLogo from '../assets/brand-logo.png'
 export default class MainView extends Component {
 
   handleSignout() {
-    auth.signout();
-    this.props.history.push('/login')
+    auth.signout(this.goToLogin);
   }
+
+  goToLogin = () => this.props.history.push('/login');
 
   render() {
     return (
