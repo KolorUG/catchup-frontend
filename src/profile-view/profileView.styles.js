@@ -111,7 +111,9 @@ const SectionTitle = styled.p`
   margin-bottom: 8px;
 `;
 
-const SectionContent = styled.p`
+const SectionContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   color: ${({ theme }) => theme.white};
   font-weight: 100;
 `;

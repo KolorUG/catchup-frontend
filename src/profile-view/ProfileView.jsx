@@ -25,6 +25,18 @@ export default class ProfileView extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      subjcets: null,
+      selectedSubject: null
+    }
+  }
+
+  selectSubject = subject => this.setState({ selectedSubject: subject });
+
+  componentDidMount() {
+    this.setState({
+      subjects: ['mathematics', 'physics', 'IT']
+    })
   }
 
   render() {
@@ -61,8 +73,10 @@ export default class ProfileView extends Component {
           <Section>
             <SectionTitle>WHAT CAN I HELP YOU WITH</SectionTitle>
             <SectionContent>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur cursus libero, ut malesuada augue tristique ac.
-              Aenean dignissim suscipit sapien, hendrerit semper eros mollis tincidunt. Quisque non mattis tortor."
+              {
+                this.state.subjects !== null ?
+                ['mathematics', 'physics', 'IT'].map(e => <Button type={{ margin: 'marginTop'}} isActive={e === this.state.selectedSubject} onClick={() => this.selectSubject(e)}>{e}</Button>) : null
+              }
             </SectionContent>
           </Section>
         </ProfileLowerView>
