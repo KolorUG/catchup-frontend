@@ -9,7 +9,7 @@ const auth = {
   signout(callback) {
     storageService.remove('catchup-auth-token');
     this.isAuthenticated = false;
-    setTimeout(callback, 100)
+    setTimeout(callback, 1000)
   }
 };
 
