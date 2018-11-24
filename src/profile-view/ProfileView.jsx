@@ -71,7 +71,7 @@ export default class ProfileView extends Component {
             </SectionContent>
           </Section>
           <Section>
-            <SectionTitle>WHAT CAN I HELP YOU WITH</SectionTitle>
+            <SectionTitle>WHAT I CAN HELP YOU WITH</SectionTitle>
             <SectionContent>
               {
                 this.state.subjects !== null ?
