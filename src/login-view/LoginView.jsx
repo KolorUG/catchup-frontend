@@ -58,7 +58,7 @@ export default class LoginView extends Component {
     return (
         <LoginViewWrapper>
           <BrandLogoWrapper>
-            <img src={brandLogo}/>
+            <img src={brandLogo} alt="login"/>
           </BrandLogoWrapper>
           <InputGrouper>
             <InputWrapper>

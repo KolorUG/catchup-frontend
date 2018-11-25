@@ -4,6 +4,14 @@ const ProfileViewWrapper = styled.div`
   padding: 16px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  
+  @media screen and (min-width: 800px) {
+    padding: 24px;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    padding: 32px;
+  }
 `;
 
 const ProfileTopView = styled.div`
@@ -52,6 +60,9 @@ const Reward = styled.img`
 
 const CrucialInfo = styled.div`
   margin-left: 16px;
+  @media screen and (min-width: 800px) {
+    flex: 1 0 30%;
+  }
 `;
 
 const Title = styled.p`
@@ -93,22 +104,35 @@ const Symbol = styled.div`
     width: auto;
     margin-right: 8px;
   }
+  
+  @media screen and (min-width: 800px) {
+    flex: 1 0 51%;
+  }
 `;
 
 const ProfileLowerView = styled.div`
   margin-top: 16px;
+  ${({ desktop }) => desktop === true ? `
+  display: flex;
+  justify-content: space-between;
+  ` : null}
 `;
 
 const Section = styled.div`
-margin-bottom: 16px;
+  color: ${({ theme }) => theme.fontColor};
+  margin-bottom: 16px;
+  width: ${({ type }) => type && type.width ? type.width : '100%'}
 `;
 
 const SectionTitle = styled.p`
-  color: ${({ theme }) => theme.fontColor};
   font-weight: 400;
   margin-bototm: 4px;
   opacity: 0.33;
   margin-bottom: 8px;
+  
+  @media screen and (min-width: 800px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const SectionContent = styled.div`
@@ -121,11 +145,16 @@ const SectionContent = styled.div`
 const BottomBar = styled.div`
   position: fixed;
   bottom: 16px;
-  left: 0;  
-  width: 100%;
+  left: 10%;  
+  width: 80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   color: ${({ theme }) => theme.fontColor};
+  
+  @media screen and (min-width: 1200px) {
+    width: 25%;
+    left: 37.5%;
+  }
 `;
 
 export {

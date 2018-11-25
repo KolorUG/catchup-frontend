@@ -20,7 +20,7 @@ export default class MainView extends Component {
     return (
       <MainViewWrapper>
         <BrandLogoWrapper>
-          <img src={BrandLogo}/>
+          <img src={BrandLogo} alt="brand"/>
         </BrandLogoWrapper>
         <MainButtonsGroup>
           <Button onClick={() => this.props.history.push('/profile')}>PROFILE</Button>
