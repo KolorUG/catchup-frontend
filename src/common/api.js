@@ -1,9 +1,32 @@
 import axios from 'axios';
 import storageService from './storageService.js'
+
+const token = storageService.get('catchup-auth-key');
+
 const api = axios.create({
-  baseURL: 'http://localhost:3001'
+  baseURL: 'https://catchupcolor.azurewebsites.net',
+  headers: {
+    Authorization: `Bearer ${token}`
+  }
 });
 
-api.defaults.timeout = 5000;
+const register = ({ firstName, lastName, userName, password}) => api.post('/users/register', {
+  firstName,
+  lastName,
+  userName,
+  password
+});
 
-api.defaults.headers.common['Authorization'] = storageService.get('catchup-auth-key');
+const login = async ({ username, password }) => {
+  const response = await api.post("/users/authenticate", {
+    username,
+    password
+  });
+  storageService.set('catchup-auth-key');
+
+  return response;
+};
+
+
+export { register, login };
+
