@@ -19,16 +19,18 @@ const register = ({ firstName, lastName, userName, password}) => api.post('/user
 });
 
 const login = async ({ username, password }, successCallback) => {
+  let jsonToken = '';
   const response = await api.post("/users/authenticate", {
     username,
     password
   })
     // when succeeds
-    .then(() => {
+    .then(json => {
+      jsonToken = json.data.token;
       auth.authenticate(successCallback)
     })
     .then(() => console.log('elo'));
-  storageService.set('catchup-auth-key', token);
+  storageService.set('catchup-auth-key', jsonToken);
 
   return response;
 };
