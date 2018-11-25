@@ -1,5 +1,6 @@
 import axios from 'axios';
 import storageService from './storageService.js'
+import auth from './auth.js'
 
 const token = storageService.get('catchup-auth-key');
 
@@ -17,12 +18,17 @@ const register = ({ firstName, lastName, userName, password}) => api.post('/user
   password
 });
 
-const login = async ({ username, password }) => {
+const login = async ({ username, password }, successCallback) => {
   const response = await api.post("/users/authenticate", {
     username,
     password
-  });
-  storageService.set('catchup-auth-key');
+  })
+    // when succeeds
+    .then(() => {
+      auth.authenticate(successCallback)
+    })
+    .then(() => console.log('elo'));
+  storageService.set('catchup-auth-key', token);
 
   return response;
 };

@@ -9,7 +9,7 @@ import {
   Input
 } from './loginView.styles.js'
 import Button from '../common/Button.style.js'
-import auth from '../common/auth.js'
+import { login } from "../common/api";
 
 import brandLogo from '../assets/brand-logo.png'
 
@@ -30,13 +30,17 @@ export default class LoginView extends Component {
       [credintial]: event.target.value
     });
 
+  goToIndex() {
+    this.props.history.push('/index')
+  }
+
   handleSubmit = () => {
     this.setState({
       wasSubmittedOnce: true,
       isSubmitting: true,
     });
 
-    if (this.state.password.length < 6 || this.state.password.length > 18) {
+    if (this.state.login.length < 5 || this.state.login.length > 30) {
       this.setState({
         isSubmitting: false
       });
@@ -49,10 +53,17 @@ export default class LoginView extends Component {
       return;
     }
 
-    auth.authenticate(this.goToIndex);
+    login({
+      username: this.state.login,
+      password: this.state.password
+    }, () => this.goToIndex())
+      .catch(err => {
+        console.log(err);
+        this.setState({
+          isSubmitting: false
+        })
+      })
   };
-
-  goToIndex = () => this.props.history.push('/index');
 
   render() {
     return (
