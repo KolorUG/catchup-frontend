@@ -14,7 +14,7 @@ export default class MainView extends Component {
     auth.signout(this.goToLogin);
   }
 
-  goToLogin = () => this.props.history.push('/login');
+  goToLogin = () => this.props.history.push('/');
 
   render() {
     return (

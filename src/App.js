@@ -38,7 +38,7 @@ class App extends Component {
           <React.Fragment>
             <GlobalStyle backgroundImage={this.state.windowWidth > 375 ? backgroundImageDesktop : backgroundImageMobile}/>
             <ProtectedRoute path="/index" component={MainView}/>
-            <Route path="/login" component={LoginView}/>
+            <Route exact path="/" component={LoginView}/>
             <ProtectedRoute path="/profile" component={ProfileView}/>
           </React.Fragment>
         </ThemeProvider>
